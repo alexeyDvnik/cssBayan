@@ -8,14 +8,11 @@ html {
 	font-size: 62.5%;
 }
 
-body {
-	
-}
-
 h1 {
 	font-size: 3.4rem;
 	text-align:  center;
 	padding-top: 10vh;
+	margin-bottom: 8vh;
 }
 
 .container {
@@ -24,10 +21,45 @@ h1 {
 }
 
 .accordion {
-	max-width: 800px;
-	font-size: 1.8rem;
+	max-width: 64rem;
+	font-size: 2rem;
+	margin: 0 auto;
 }
 
 .item input {
 	display: none;
+}
+
+.item {
+	margin-bottom: 2rem;
+}
+
+.item-title {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(241, 236, 236);
+	padding: 0.8rem 0.6rem 1rem 0.6rem;
+}
+
+.accordion-content {
+	overflow: hidden;
+	max-height: 0;
+	transition: all ease-in-out 0.8s;
+}
+
+.accordion-content img {
+	object-position: 0 -1.6rem;
+}
+
+.accordion-ico {
+	width: 3rem;
+	transition: all ease-in-out 0.3s;
+}
+
+.item :checked ~ .accordion-content {
+	max-height: 56rem;
+}
+
+.item :checked ~ .item-title .accordion-ico {
+	transform: rotate(180deg);
 }
