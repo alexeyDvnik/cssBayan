@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	
+}
+
+h1 {
+	font-size: 3.4rem;
+	text-align:  center;
+	padding-top: 10vh;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 80vw;
+}
+
+.accordion {
+	max-width: 800px;
+	font-size: 1.8rem;
+}
+
+.item input {
+	display: none;
+}
