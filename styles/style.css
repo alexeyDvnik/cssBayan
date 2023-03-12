@@ -8,22 +8,38 @@ html {
 	font-size: 62.5%;
 }
 
+body {
+	background: url('../items/office.jpg') no-repeat local;
+	background-size: cover;
+	background-position: 0 0;
+}
+
 h1 {
 	font-size: 3.4rem;
 	text-align:  center;
 	padding-top: 10vh;
 	margin-bottom: 8vh;
+	color: blue;
 }
 
 .container {
 	margin: 0 auto;
 	max-width: 80vw;
+	min-height: 100vh;
 }
 
 .accordion {
-	max-width: 64rem;
-	font-size: 2rem;
 	margin: 0 auto;
+	max-width: 64rem;
+}
+
+.accordion:hover {
+	cursor: pointer;
+} 
+
+.accordion:hover .accordion-ico {
+	opacity: 100;
+	transition: all ease-in-out 0.8s;
 }
 
 .item input {
@@ -32,13 +48,27 @@ h1 {
 
 .item {
 	margin-bottom: 2rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: cornflowerblue;
+	transition: all ease-in 0.5s;
 }
+
+.item:hover {
+	color: indigo;
+	cursor: pointer;
+}
+
 
 .item-title {
 	display: flex;
 	justify-content: space-between;
 	background-color: rgb(241, 236, 236);
-	padding: 0.8rem 0.6rem 1rem 0.6rem;
+	padding: 0.9rem 0.9rem 0.9rem 1.3rem;
+}
+
+.item:hover .item-title {
+	background-color: rgb(236, 215, 215);
 }
 
 .accordion-content {
@@ -49,11 +79,13 @@ h1 {
 
 .accordion-content img {
 	object-position: 0 -1.6rem;
+	max-width: 100%;
 }
 
 .accordion-ico {
 	width: 3rem;
-	transition: all ease-in-out 0.3s;
+	transition: all ease-in-out 0.8s;
+	opacity: 0;
 }
 
 .item :checked ~ .accordion-content {
@@ -63,3 +95,9 @@ h1 {
 .item :checked ~ .item-title .accordion-ico {
 	transform: rotate(180deg);
 }
+
+.item:hover .accordion-content {
+	max-height: 56rem;
+}
+
+/* ($(LC_TIME=en_US.UTF-8 date '+%a, %b %d, %Y %I:%M:%S %p')) */
