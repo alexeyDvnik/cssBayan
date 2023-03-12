@@ -4,11 +4,9 @@
 	.item:hover .accordion-ico {transform: rotate(0);}
 	.item:hover .accordion-content {max-height: 0;}
 }
-
 @media (max-width: 830px) {
 	html {font-size: 85%;}
 }
-
 @media (max-width: 340px) {
 	html {font-size: 60%;}
 	.container {max-width: 95vw;}
