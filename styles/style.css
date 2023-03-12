@@ -47,6 +47,11 @@ h1 {
 	display: none;
 }
 
+.item-title {
+	display: flex;
+	flex-direction: column;
+}
+
 .item {
 	margin-bottom: 2rem;
 	font-size: 2rem;
@@ -55,8 +60,13 @@ h1 {
 	transition: all ease-in 0.5s;
 }
 
+.item-row {
+	display: flex;
+	justify-content: space-between;
+}
+
 .item:hover {
-	color: indigo;
+	color: rgb(146, 14, 240);
 	cursor: pointer;
 }
 
@@ -66,10 +76,11 @@ h1 {
 	justify-content: space-between;
 	background-color: rgb(241, 236, 236);
 	padding: 0.9rem 0.9rem 0.9rem 1.3rem;
+	cursor: pointer;
 }
 
-.item-title {
-	cursor: pointer;
+.item-title:active {
+	color:rgb(18, 8, 24);
 }
 
 .item:hover .item-title {
@@ -80,6 +91,7 @@ h1 {
 	overflow: hidden;
 	max-height: 0;
 	transition: all ease-in-out 0.8s;
+	pointer-events: none;
 }
 
 .accordion-content img {
@@ -93,11 +105,14 @@ h1 {
 	opacity: 0;
 }
 
-.item :checked ~ .accordion-contentп {
+
+.input:checked ~ .item-title .accordion-content {
 	max-height: 56rem;
+	pointer-events: none;
 }
 
-.item :checked ~ .item-title .accordion-ico {
+
+.input:checked ~ .item-title .accordion-ico {
 	transform: rotate(180deg);
 }
 
@@ -107,6 +122,7 @@ h1 {
 
 .item:hover .accordion-content {
 	max-height: 56rem;
+	pointer-events: none;
 }
 
 /* ($(LC_TIME=en_US.UTF-8 date '+%a, %b %d, %Y %I:%M:%S %p')) */
