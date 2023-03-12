@@ -12,6 +12,7 @@ body {
 	background: url('../items/office.jpg') no-repeat local;
 	background-size: cover;
 	background-position: 0 0;
+	background-attachment: fixed;
 }
 
 h1 {
@@ -67,6 +68,10 @@ h1 {
 	padding: 0.9rem 0.9rem 0.9rem 1.3rem;
 }
 
+.item-title {
+	cursor: pointer;
+}
+
 .item:hover .item-title {
 	background-color: rgb(236, 215, 215);
 }
@@ -88,11 +93,15 @@ h1 {
 	opacity: 0;
 }
 
-.item :checked ~ .accordion-content {
+.item :checked ~ .accordion-contentп {
 	max-height: 56rem;
 }
 
 .item :checked ~ .item-title .accordion-ico {
+	transform: rotate(180deg);
+}
+
+.item:hover .accordion-ico {
 	transform: rotate(180deg);
 }
 
